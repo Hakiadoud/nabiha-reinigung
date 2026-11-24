@@ -44,5 +44,6 @@ fs.mkdirSync('dist', { recursive: true });
 fs.writeFileSync('dist/index.html', html);
 fs.writeFileSync('dist/i18n.js', 'window.I18N = ' + JSON.stringify(dict) + ';\n');
 fs.cpSync('img', 'dist/img', { recursive: true });
+fs.cpSync('admin', 'dist/admin', { recursive: true });
 for (const f of ['robots.txt', 'sitemap.xml', 'CNAME']) if (fs.existsSync(f)) fs.copyFileSync(f, path.join('dist', f));
 console.log('OK – Website gebaut:', site.services.length, 'Leistungen,', site.faq.length, 'FAQ');
