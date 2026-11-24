@@ -1,0 +1,27 @@
+{
+  "contact": {
+    "company": "Nabiha Reinigung",
+    "owner": "Nabiha Salim",
+    "street": "Hahler Str. 62",
+    "city": "32427 Minden",
+    "phone": "0179 5242045",
+    "phone_intl": "+491795242045",
+    "whatsapp": "491795242045",
+    "email": "nabiha.reinigung@outlook.com",
+    "google_review": "https://g.page/r/CUNGFeNiIe4HEBM/review"
+  },
+  "hours": {
+    "weekdays": "08:00–18:00",
+    "saturday": "09:00–14:00"
+  },
+  "towns": [
+    "Minden",
+    "Porta Westfalica",
+    "Petershagen",
+    "Hille",
+    "Bad Oeynhausen",
+    "Bückeburg",
+    "Rinteln",
+    "Stadthagen"
+  ]
+}

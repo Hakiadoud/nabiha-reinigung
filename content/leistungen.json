@@ -1,0 +1,170 @@
+[
+  {
+    "image": "/img/s1.webp",
+    "icon": "building",
+    "alt": "Sauberes Großraumbüro mit glänzendem Boden nach der Unterhaltsreinigung",
+    "title": {
+      "de": "Unterhaltsreinigung",
+      "ar": "التنظيف الدوري",
+      "ku": "Paqijkirina rêkûpêk",
+      "tr": "Düzenli temizlik",
+      "en": "Maintenance cleaning",
+      "fr": "Entretien régulier"
+    },
+    "text": {
+      "de": "Regelmäßige Reinigung von Büros, Praxen und Geschäften – nach festem Plan.",
+      "ar": "تنظيف منتظم للمكاتب والعيادات والمحلات – وفق جدول ثابت.",
+      "ku": "Paqijkirina birêkûpêk a ofîs, muayenexane û dikanan – li gorî planeke sabît.",
+      "tr": "Ofis, muayenehane ve dükkânların sabit plana göre düzenli temizliği.",
+      "en": "Regular cleaning of offices, practices and shops – on a fixed schedule.",
+      "fr": "Nettoyage régulier de bureaux, cabinets et commerces – selon un planning fixe."
+    }
+  },
+  {
+    "image": "/img/s2.webp",
+    "icon": "monitor",
+    "alt": "Hand mit Handschuh reinigt den Empfangstresen einer Arztpraxis mit Mikrofasertuch",
+    "title": {
+      "de": "Büro- & Praxisreinigung",
+      "ar": "تنظيف المكاتب والعيادات",
+      "ku": "Paqijkirina ofîs û muayenexaneyan",
+      "tr": "Ofis ve muayenehane temizliği",
+      "en": "Office & practice cleaning",
+      "fr": "Nettoyage de bureaux et cabinets"
+    },
+    "text": {
+      "de": "Saubere, hygienische Arbeitsplätze für Ihr Team und Ihre Kunden.",
+      "ar": "أماكن عمل نظيفة وصحية لفريقك وعملائك.",
+      "ku": "Cihên karê paqij û tendurist ji bo tîm û xerîdarên we.",
+      "tr": "Ekibiniz ve müşterileriniz için temiz, hijyenik çalışma alanları.",
+      "en": "Clean, hygienic workplaces for your team and your customers.",
+      "fr": "Des postes de travail propres et hygiéniques pour votre équipe et vos clients."
+    }
+  },
+  {
+    "image": "/img/s3.webp",
+    "icon": "stairs",
+    "alt": "Frisch gewischtes Treppenhaus in einem Mehrfamilienhaus",
+    "title": {
+      "de": "Treppenhausreinigung",
+      "ar": "تنظيف الأدراج",
+      "ku": "Paqijkirina derenceyan",
+      "tr": "Merdiven boşluğu temizliği",
+      "en": "Stairwell cleaning",
+      "fr": "Nettoyage de cages d'escalier"
+    },
+    "text": {
+      "de": "Gepflegte Treppenhäuser für Hausverwaltungen und Eigentümer.",
+      "ar": "أدراج عمارات مرتّبة لإدارات العقارات والمالكين.",
+      "ku": "Derenceyên xweşik ji bo rêveberiyên xaniyan û xwedî milkan.",
+      "tr": "Yönetimler ve mülk sahipleri için bakımlı merdiven boşlukları.",
+      "en": "Well-kept stairwells for property managers and owners.",
+      "fr": "Des cages d'escalier soignées pour les syndics et les propriétaires."
+    }
+  },
+  {
+    "image": "/img/s4.webp",
+    "icon": "window",
+    "alt": "Streifenfreie Fensterreinigung mit Abzieher",
+    "title": {
+      "de": "Fenster- & Glasreinigung",
+      "ar": "تنظيف النوافذ والزجاج",
+      "ku": "Paqijkirina pencere û camê",
+      "tr": "Cam ve pencere temizliği",
+      "en": "Window & glass cleaning",
+      "fr": "Nettoyage de vitres"
+    },
+    "text": {
+      "de": "Streifenfrei – innen und außen, inklusive Rahmen und Schaufenster.",
+      "ar": "بلا آثار – من الداخل والخارج، مع الإطارات وواجهات المحلات.",
+      "ku": "Bê şop – hundir û derve, bi çarçove û camên dikanan re.",
+      "tr": "İz bırakmadan – içte ve dışta, çerçeveler ve vitrinler dahil.",
+      "en": "Streak-free – inside and out, including frames and shop windows.",
+      "fr": "Sans traces – à l'intérieur et à l'extérieur, cadres et vitrines compris."
+    }
+  },
+  {
+    "image": "/img/s5.webp",
+    "icon": "sparkle",
+    "alt": "Reinigungsmaschine bei der Grundreinigung eines Fliesenbodens",
+    "title": {
+      "de": "Grundreinigung",
+      "ar": "التنظيف الشامل",
+      "ku": "Paqijkirina bingehîn",
+      "tr": "Detaylı temizlik",
+      "en": "Deep cleaning",
+      "fr": "Grand nettoyage"
+    },
+    "text": {
+      "de": "Gründlich bis ins Detail, wenn eine normale Reinigung nicht mehr reicht.",
+      "ar": "تنظيف عميق حتى أدق التفاصيل عندما لا يكفي التنظيف العادي.",
+      "ku": "Heta hûrguliyên herî biçûk, dema paqijkirina asayî êdî têr nake.",
+      "tr": "Normal temizlik yetmediğinde en ince ayrıntısına kadar.",
+      "en": "Thorough down to the last detail when regular cleaning is no longer enough.",
+      "fr": "Minutieux jusque dans les détails, quand un nettoyage normal ne suffit plus."
+    }
+  },
+  {
+    "image": "/img/s6.webp",
+    "icon": "box",
+    "alt": "Leere, frisch renovierte Wohnung nach der Endreinigung",
+    "title": {
+      "de": "Bau- & Endreinigung",
+      "ar": "تنظيف بعد البناء والإخلاء",
+      "ku": "Paqijkirina piştî avakirin û barkirinê",
+      "tr": "İnşaat sonrası ve taşınma temizliği",
+      "en": "Post-construction & move-out cleaning",
+      "fr": "Nettoyage de fin de chantier et de déménagement"
+    },
+    "text": {
+      "de": "Übergabefertig nach Umbau, Renovierung, Ein- oder Auszug.",
+      "ar": "جاهز للتسليم بعد الترميم أو الانتقال إلى المسكن أو مغادرته.",
+      "ku": "Amade ji bo radestkirinê piştî nûjenkirin, barkirin an derketinê.",
+      "tr": "Tadilat, taşınma veya tahliye sonrası teslime hazır.",
+      "en": "Ready for handover after renovation, moving in or moving out.",
+      "fr": "Prêt pour la remise des clés après travaux, emménagement ou déménagement."
+    }
+  },
+  {
+    "image": "/img/s7.webp",
+    "icon": "sofa",
+    "alt": "Polsterreinigung eines grauen Sofas – gereinigte und ungereinigte Hälfte",
+    "title": {
+      "de": "Polster- & Teppichreinigung",
+      "ar": "تنظيف المفروشات والسجاد",
+      "ku": "Paqijkirina mobîlya û xalîçeyan",
+      "tr": "Koltuk ve halı temizliği",
+      "en": "Upholstery & carpet cleaning",
+      "fr": "Nettoyage de meubles rembourrés et tapis"
+    },
+    "text": {
+      "de": "Frische und Sauberkeit für Sofas, Stühle und Teppiche.",
+      "ar": "نظافة وانتعاش للكنب والكراسي والسجاد.",
+      "ku": "Paqijî û tazebûn ji bo qenepe, kursî û xalîçeyan.",
+      "tr": "Kanepe, sandalye ve halılar için ferahlık ve temizlik.",
+      "en": "Freshness and cleanliness for sofas, chairs and carpets.",
+      "fr": "Fraîcheur et propreté pour canapés, chaises et tapis."
+    }
+  },
+  {
+    "image": "/img/s8.webp",
+    "icon": "home",
+    "alt": "Aufgeräumtes, helles Wohnzimmer mit offener Küche und Reinigungsutensilien",
+    "title": {
+      "de": "Privathaushalte",
+      "ar": "المنازل الخاصة",
+      "ku": "Malên taybet",
+      "tr": "Evler",
+      "en": "Private households",
+      "fr": "Particuliers"
+    },
+    "text": {
+      "de": "Regelmäßig oder einmalig – damit Sie Zeit für Wichtigeres haben.",
+      "ar": "بشكل دوري أو لمرة واحدة – ليبقى وقتك لما هو أهم.",
+      "ku": "Bi rêkûpêk an carekê – da ku wextê we ji bo tiştên girîngtir bimîne.",
+      "tr": "Düzenli ya da tek seferlik – önemli işlere zamanınız kalsın.",
+      "en": "Regular or one-off – so you have time for what matters.",
+      "fr": "Régulier ou ponctuel – pour que vous ayez du temps pour l'essentiel."
+    }
+  }
+]

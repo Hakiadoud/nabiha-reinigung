@@ -1,0 +1,92 @@
+[
+  {
+    "q": {
+      "de": "Was kostet eine Reinigung?",
+      "ar": "كم تكلّف عملية التنظيف؟",
+      "ku": "Paqijkirin çiqas e?",
+      "tr": "Temizlik ne kadar tutar?",
+      "en": "How much does cleaning cost?",
+      "fr": "Combien coûte un nettoyage ?"
+    },
+    "a": {
+      "de": "Das hängt von Fläche, Zustand und Häufigkeit ab. Nach einer kostenlosen Besichtigung erhalten Sie ein festes, unverbindliches Angebot.",
+      "ar": "يعتمد ذلك على المساحة والحالة وعدد المرات. بعد معاينة مجانية تحصل على عرض سعر ثابت وغير مُلزم.",
+      "ku": "Li gorî mezinahî, rewş û hejmara caran diguhere. Piştî seredaneke belaş hûn pêşniyareke sabît û ne-mecbûrî distînin.",
+      "tr": "Alana, duruma ve sıklığa bağlıdır. Ücretsiz keşiften sonra sabit ve bağlayıcı olmayan bir teklif alırsınız.",
+      "en": "It depends on size, condition and frequency. After a free on-site visit you receive a fixed, non-binding quote.",
+      "fr": "Cela dépend de la surface, de l'état et de la fréquence. Après une visite gratuite, vous recevez un devis fixe et sans engagement."
+    }
+  },
+  {
+    "q": {
+      "de": "Bringen Sie Reinigungsmittel und Geräte mit?",
+      "ar": "هل تحضرون مواد وأدوات التنظيف معكم؟",
+      "ku": "Hûn alav û madeyên paqijkirinê bi xwe re tînin?",
+      "tr": "Temizlik malzemelerini ve aletleri getiriyor musunuz?",
+      "en": "Do you bring cleaning products and equipment?",
+      "fr": "Apportez-vous les produits et le matériel ?"
+    },
+    "a": {
+      "de": "Ja. Wir kommen mit eigenen Geräten und Reinigungsmitteln. Besondere Wünsche berücksichtigen wir gern.",
+      "ar": "نعم. نأتي بأدواتنا ومواد التنظيف الخاصة بنا، ونأخذ طلباتك الخاصة بعين الاعتبار.",
+      "ku": "Belê. Em bi alav û madeyên xwe tên. Em daxwazên we yên taybet bi kêfxweşî li ber çavan digirin.",
+      "tr": "Evet. Kendi alet ve temizlik malzemelerimizle geliyoruz. Özel isteklerinizi memnuniyetle dikkate alırız.",
+      "en": "Yes. We bring our own equipment and cleaning products. We're happy to consider special requests.",
+      "fr": "Oui. Nous venons avec notre propre matériel et nos produits. Nous tenons volontiers compte de vos demandes particulières."
+    }
+  },
+  {
+    "q": {
+      "de": "Reinigen Sie regelmäßig oder auch einmalig?",
+      "ar": "هل تنظّفون بشكل دوري أم لمرة واحدة؟",
+      "ku": "Hûn bi rêkûpêk an tenê carekê paqij dikin?",
+      "tr": "Düzenli mi yoksa tek seferlik mi temizlik yapıyorsunuz?",
+      "en": "Do you clean regularly or one-off?",
+      "fr": "Nettoyez-vous régulièrement ou ponctuellement ?"
+    },
+    "a": {
+      "de": "Beides. Wir übernehmen feste Reinigungspläne (z. B. wöchentlich) ebenso wie einmalige Grund-, Bau- oder Endreinigungen.",
+      "ar": "الاثنان. نتولى جداول تنظيف ثابتة (أسبوعيًا مثلًا) وكذلك التنظيف الشامل أو بعد البناء أو عند الإخلاء.",
+      "ku": "Herdu jî. Em planên paqijkirinê yên sabît (mînak her hefte) û herwiha paqijkirina bingehîn, piştî avakirinê an derketinê dikin.",
+      "tr": "Her ikisi de. Sabit temizlik planlarının (ör. haftalık) yanı sıra tek seferlik detaylı, inşaat sonrası veya taşınma temizliği de yapıyoruz.",
+      "en": "Both. We handle fixed cleaning schedules (e.g. weekly) as well as one-off deep, post-construction or move-out cleaning.",
+      "fr": "Les deux. Nous assurons des plannings fixes (par ex. hebdomadaires) ainsi que des grands nettoyages, des nettoyages de fin de chantier ou de déménagement."
+    }
+  },
+  {
+    "q": {
+      "de": "Wie schnell können Sie anfangen?",
+      "ar": "متى يمكنكم البدء؟",
+      "ku": "Hûn dikarin çiqas zû dest pê bikin?",
+      "tr": "Ne kadar hızlı başlayabilirsiniz?",
+      "en": "How soon can you start?",
+      "fr": "Dans quels délais pouvez-vous commencer ?"
+    },
+    "a": {
+      "de": "Melden Sie sich einfach – wir vereinbaren schnell einen Besichtigungstermin und besprechen den Starttermin mit Ihnen.",
+      "ar": "تواصل معنا فقط – نحدد موعد معاينة بسرعة ونتفق معك على موعد البدء.",
+      "ku": "Tenê bi me re têkilî daynin – em zû wextekî seredanê diyar dikin û roja destpêkê bi we re li hev dikin.",
+      "tr": "Bize ulaşmanız yeterli – hızlıca bir keşif randevusu ayarlar ve başlangıç tarihini sizinle belirleriz.",
+      "en": "Just get in touch – we'll quickly arrange a visit and agree on a start date with you.",
+      "fr": "Contactez-nous simplement – nous fixons rapidement une visite et convenons avec vous de la date de début."
+    }
+  },
+  {
+    "q": {
+      "de": "Bekomme ich eine ordentliche Rechnung?",
+      "ar": "هل أحصل على فاتورة رسمية؟",
+      "ku": "Ez ê fatûreyeke fermî bistînim?",
+      "tr": "Düzgün bir fatura alır mıyım?",
+      "en": "Will I get a proper invoice?",
+      "fr": "Vais-je recevoir une facture en bonne et due forme ?"
+    },
+    "a": {
+      "de": "Selbstverständlich. Sie erhalten für jeden Auftrag eine ordnungsgemäße Rechnung – auch per E-Mail als PDF.",
+      "ar": "بالتأكيد. تحصل على فاتورة رسمية لكل عمل – ويمكن إرسالها بالبريد الإلكتروني بصيغة ⁨PDF⁩.",
+      "ku": "Bê guman. Ji bo her karî hûn fatûreyeke fermî distînin – bi e-nameyê wek PDF jî.",
+      "tr": "Elbette. Her iş için usulüne uygun bir fatura alırsınız – e-posta ile PDF olarak da.",
+      "en": "Of course. You receive a proper invoice for every job – also by email as a PDF.",
+      "fr": "Bien sûr. Vous recevez une facture conforme pour chaque prestation – également par e-mail au format PDF."
+    }
+  }
+]

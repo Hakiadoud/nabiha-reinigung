@@ -1,0 +1,648 @@
+# Konfiguration für Pages CMS (https://app.pagescms.org)
+media:
+  input: img
+  output: /img
+  categories: [image]
+content:
+  - name: kontakt
+    label: "📞 Kontakt & Öffnungszeiten"
+    type: file
+    path: content/kontakt.json
+    format: json
+    fields:
+      - name: contact
+        label: Kontaktdaten
+        type: object
+        fields:
+          - { name: company, label: "Firmenname", type: string, required: true }
+          - { name: owner, label: "Inhaberin", type: string, required: true }
+          - { name: street, label: "Straße und Hausnummer", type: string, required: true }
+          - { name: city, label: "PLZ und Ort", type: string, required: true }
+          - { name: phone, label: "Telefon (Anzeige, z. B. 0179 5242045)", type: string, required: true }
+          - { name: phone_intl, label: "Telefon international (z. B. +491795242045)", type: string, required: true }
+          - { name: whatsapp, label: "WhatsApp-Nummer ohne + (z. B. 491795242045)", type: string, required: true }
+          - { name: email, label: "E-Mail", type: string, required: true }
+          - { name: google_review, label: "Google-Bewertungslink", type: string, required: true }
+      - name: hours
+        label: Öffnungszeiten
+        type: object
+        fields:
+          - { name: weekdays, label: "Mo–Fr (z. B. 08:00–18:00)", type: string }
+          - { name: saturday, label: "Samstag (z. B. 09:00–14:00)", type: string }
+      - name: towns
+        label: "Einsatzgebiet (Orte, der erste wird hervorgehoben)"
+        type: string
+        list: true
+  - name: leistungen
+    label: "🧽 Leistungen (Karten mit Bild)"
+    type: file
+    path: content/leistungen.json
+    format: json
+    list: true
+    fields:
+      - { name: image, label: "Bild (Querformat 4:3)", type: image }
+      - name: icon
+        label: Symbol
+        type: select
+        options:
+          values: [building, monitor, stairs, window, sparkle, box, sofa, home]
+      - { name: alt, label: "Bildbeschreibung für Google (Deutsch)", type: string }
+      - name: title
+        label: Titel
+        type: object
+        fields:
+          - { name: de, label: "Deutsch", type: string }
+          - { name: ar, label: "العربية (Arabisch)", type: string }
+          - { name: ku, label: "Kurdî (Kurdisch)", type: string }
+          - { name: tr, label: "Türkçe (Türkisch)", type: string }
+          - { name: en, label: "English (Englisch)", type: string }
+          - { name: fr, label: "Français (Französisch)", type: string }
+      - name: text
+        label: Kurzbeschreibung
+        type: object
+        fields:
+          - { name: de, label: "Deutsch", type: text }
+          - { name: ar, label: "العربية (Arabisch)", type: text }
+          - { name: ku, label: "Kurdî (Kurdisch)", type: text }
+          - { name: tr, label: "Türkçe (Türkisch)", type: text }
+          - { name: en, label: "English (Englisch)", type: text }
+          - { name: fr, label: "Français (Französisch)", type: text }
+  - name: faq
+    label: "❓ Häufige Fragen"
+    type: file
+    path: content/faq.json
+    format: json
+    list: true
+    fields:
+      - name: q
+        label: Frage
+        type: object
+        fields:
+          - { name: de, label: "Deutsch", type: string }
+          - { name: ar, label: "العربية (Arabisch)", type: string }
+          - { name: ku, label: "Kurdî (Kurdisch)", type: string }
+          - { name: tr, label: "Türkçe (Türkisch)", type: string }
+          - { name: en, label: "English (Englisch)", type: string }
+          - { name: fr, label: "Français (Französisch)", type: string }
+      - name: a
+        label: Antwort
+        type: object
+        fields:
+          - { name: de, label: "Deutsch", type: text }
+          - { name: ar, label: "العربية (Arabisch)", type: text }
+          - { name: ku, label: "Kurdî (Kurdisch)", type: text }
+          - { name: tr, label: "Türkçe (Türkisch)", type: text }
+          - { name: en, label: "English (Englisch)", type: text }
+          - { name: fr, label: "Français (Französisch)", type: text }
+  - name: texte
+    label: "📝 Alle weiteren Texte (6 Sprachen)"
+    type: file
+    path: content/texte.json
+    format: json
+    fields:
+      - name: de
+        label: "Deutsch"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: string }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: string }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — ", type: string }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
+      - name: ar
+        label: "العربية (Arabisch)"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: string }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: string }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — المعلومات القانونية متوفرة باللغة الألمانية، وهي ا", type: string }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
+      - name: ku
+        label: "Kurdî (Kurdisch)"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: text }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: string }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — Agahiyên hiqûqî bi Almanî ne û metna Almanî ya bin", type: string }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
+      - name: tr
+        label: "Türkçe (Türkisch)"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: string }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: string }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — Yasal bilgiler Almancadır ve bağlayıcı olan Almanc", type: string }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
+      - name: en
+        label: "English (Englisch)"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: string }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: string }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — The legal information is provided in German, which", type: string }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
+      - name: fr
+        label: "Français (Französisch)"
+        type: object
+        fields:
+          - { name: ct_flex, label: "ct_flex — Reinigungseinsätze auch frühmorgens, abends und am", type: text }
+          - { name: ct_hours, label: "ct_hours — Öffnungszeiten", type: string }
+          - { name: h_wd, label: "h_wd — Mo–Fr", type: string }
+          - { name: h_sa, label: "h_sa — Sa", type: string }
+          - { name: title, label: "title — Nabiha Reinigung – Gebäudereinigung in Minden & Um", type: string }
+          - { name: nav_services, label: "nav_services — Leistungen", type: string }
+          - { name: nav_why, label: "nav_why — Warum wir", type: string }
+          - { name: nav_process, label: "nav_process — Ablauf", type: string }
+          - { name: nav_area, label: "nav_area — Einsatzgebiet", type: string }
+          - { name: nav_faq, label: "nav_faq — FAQ", type: string }
+          - { name: nav_contact, label: "nav_contact — Kontakt", type: string }
+          - { name: cta_quote, label: "cta_quote — Angebot anfragen", type: string }
+          - { name: hero_eyebrow, label: "hero_eyebrow — Gebäudereinigung in Minden & Umgebung", type: string }
+          - { name: hero_title1, label: "hero_title1 — Saubere Räume.", type: string }
+          - { name: hero_title2, label: "hero_title2 — Hellerer Alltag.", type: string }
+          - { name: hero_sub, label: "hero_sub — Professionelle Reinigung für Büros, Praxen, Treppe", type: text }
+          - { name: hero_btn, label: "hero_btn — Kostenloses Angebot anfragen", type: string }
+          - { name: hero_wa, label: "hero_wa — Per WhatsApp schreiben", type: string }
+          - { name: chip1, label: "chip1 — Eingetragen bei der Handwerkskammer Ostwestfalen‑L", type: string }
+          - { name: chip2, label: "chip2 — Kostenlose Besichtigung & Angebot", type: string }
+          - { name: chip3, label: "chip3 — Wir sprechen Ihre Sprache", type: string }
+          - { name: badge_t, label: "badge_t — Minden & Umgebung", type: string }
+          - { name: badge_s, label: "badge_s — Privat & Gewerbe", type: string }
+          - { name: srv_kicker, label: "srv_kicker — Leistungen", type: string }
+          - { name: srv_title, label: "srv_title — Alles sauber – aus einer Hand", type: string }
+          - { name: srv_sub, label: "srv_sub — Ob regelmäßig oder einmalig: Wir stimmen jede Rein", type: text }
+          - { name: aud_kicker, label: "aud_kicker — Für wen", type: string }
+          - { name: aud_title, label: "aud_title — Für Betriebe, Vermieter und Familien", type: string }
+          - { name: a1t, label: "a1t — Büros, Praxen & Geschäfte", type: string }
+          - { name: a1d, label: "a1d — Ein gepflegter Eindruck für Kunden und Patienten –", type: text }
+          - { name: a2t, label: "a2t — Hausverwaltungen & Eigentümer", type: string }
+          - { name: a2d, label: "a2d — Zuverlässige Treppenhaus- und Fensterreinigung nac", type: text }
+          - { name: a3t, label: "a3t — Privathaushalte", type: string }
+          - { name: a3d, label: "a3d — Ein sauberes Zuhause ohne Stress – ob jede Woche o", type: text }
+          - { name: why_kicker, label: "why_kicker — Warum Nabiha", type: string }
+          - { name: why_title, label: "why_title — Darauf können Sie sich verlassen", type: string }
+          - { name: w1t, label: "w1t — Feste Ansprechpartner", type: string }
+          - { name: w1d, label: "w1d — Sie sprechen immer mit denselben Menschen – kurze ", type: text }
+          - { name: w2t, label: "w2t — Pünktlich & gründlich", type: string }
+          - { name: w2d, label: "w2d — Wir kommen, wann wir es versprechen, und arbeiten ", type: text }
+          - { name: w3t, label: "w3t — Faire, klare Angebote", type: string }
+          - { name: w3d, label: "w3d — Nach einer kostenlosen Besichtigung erhalten Sie e", type: text }
+          - { name: w4t, label: "w4t — Mehrsprachiges Team", type: string }
+          - { name: w4d, label: "w4d — Deutsch, Arabisch, Kurdisch, Türkisch und Englisch", type: text }
+          - { name: pro_kicker, label: "pro_kicker — So einfach geht's", type: string }
+          - { name: pro_title, label: "pro_title — In drei Schritten zu sauberen Räumen", type: string }
+          - { name: p1t, label: "p1t — Anfrage senden", type: string }
+          - { name: p1d, label: "p1d — Per Telefon, WhatsApp, E-Mail oder über das Formul", type: text }
+          - { name: p2t, label: "p2t — Besichtigung & Angebot", type: string }
+          - { name: p2d, label: "p2d — Wir schauen uns Ihre Räume an und erstellen Ihnen ", type: text }
+          - { name: p3t, label: "p3t — Sauberkeit genießen", type: string }
+          - { name: p3d, label: "p3d — Wir legen los – zuverlässig, pünktlich und genau s", type: text }
+          - { name: area_kicker, label: "area_kicker — Einsatzgebiet", type: string }
+          - { name: area_title, label: "area_title — In Minden und Umgebung für Sie da", type: string }
+          - { name: area_sub, label: "area_sub — Ihr Ort ist nicht dabei? Fragen Sie einfach – wir ", type: text }
+          - { name: faq_kicker, label: "faq_kicker — Häufige Fragen", type: string }
+          - { name: faq_title, label: "faq_title — Gut zu wissen", type: string }
+          - { name: ct_kicker, label: "ct_kicker — Kontakt", type: string }
+          - { name: ct_title, label: "ct_title — Kostenloses Angebot anfragen", type: string }
+          - { name: ct_sub, label: "ct_sub — Schreiben Sie uns kurz, worum es geht. Wir melden ", type: text }
+          - { name: ct_phone, label: "ct_phone — Telefon", type: string }
+          - { name: ct_mail, label: "ct_mail — E-Mail", type: string }
+          - { name: ct_wa, label: "ct_wa — WhatsApp", type: string }
+          - { name: ct_wa_val, label: "ct_wa_val — Jetzt chatten", type: string }
+          - { name: f_name, label: "f_name — Ihr Name", type: string }
+          - { name: f_contact, label: "f_contact — Telefon oder E-Mail", type: string }
+          - { name: f_service, label: "f_service — Gewünschte Leistung", type: string }
+          - { name: f_choose, label: "f_choose — Bitte wählen", type: string }
+          - { name: f_other, label: "f_other — Sonstiges", type: string }
+          - { name: f_msg, label: "f_msg — Ihre Nachricht (z. B. Ort, Fläche, Häufigkeit)", type: string }
+          - { name: f_wa, label: "f_wa — Per WhatsApp senden", type: string }
+          - { name: f_mail, label: "f_mail — Per E-Mail senden", type: string }
+          - { name: f_note, label: "f_note — Ihre Angaben werden nicht auf dieser Website gespe", type: text }
+          - { name: f_err, label: "f_err — Bitte geben Sie Ihren Namen und eine Kontaktmöglic", type: string }
+          - { name: m_intro, label: "m_intro — Hallo Nabiha Reinigung, ich interessiere mich für ", type: string }
+          - { name: m_name, label: "m_name — Name", type: string }
+          - { name: m_contact, label: "m_contact — Kontakt", type: string }
+          - { name: m_service, label: "m_service — Leistung", type: string }
+          - { name: m_text, label: "m_text — Nachricht", type: string }
+          - { name: m_subject, label: "m_subject — Anfrage über die Website", type: string }
+          - { name: ft_tag, label: "ft_tag — Gebäudereinigung in Minden & Umgebung – sauber, zu", type: text }
+          - { name: ft_imp, label: "ft_imp — Impressum", type: string }
+          - { name: ft_dp, label: "ft_dp — Datenschutz", type: string }
+          - { name: ft_rights, label: "ft_rights — Alle Rechte vorbehalten.", type: string }
+          - { name: legal_note, label: "legal_note — Les informations légales sont rédigées en allemand", type: text }
+          - { name: close, label: "close — Schließen", type: string }
+          - { name: lang_label, label: "lang_label — Sprache", type: string }
