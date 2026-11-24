@@ -19,7 +19,7 @@ const opts = site.services.map((s, i) => `<option data-i18n="s${i + 1}t">${esc(s
 const foot = site.services.slice(0, 4).map((s, i) => `<li><a href="#leistungen" data-i18n="s${i + 1}t">${esc(s.title.de)}</a></li>`).join('');
 const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'LocalBusiness', name: c.company, description: 'Gebäudereinigung in Minden und Umgebung', image: 'img/og.jpg', logo: 'img/logo.png', telephone: c.phone_intl, email: c.email,
   address: { '@type': 'PostalAddress', streetAddress: c.street, postalCode: c.city.split(' ')[0], addressLocality: c.city.split(' ').slice(1).join(' '), addressCountry: 'DE' },
-  areaServed: site.towns, knowsLanguage: ['de', 'ar', 'ku', 'tr', 'en'],
+  areaServed: site.towns, knowsLanguage: ['de', 'ar', 'ku', 'tr', 'en', 'fr'],
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: site.hours.weekdays.split('–')[0], closes: site.hours.weekdays.split('–')[1] }, { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: site.hours.saturday.split('–')[0], closes: site.hours.saturday.split('–')[1] }] }).replace(/</g, '\\u003c');
 
 html = html.replace('<!--SERVICES-->', services).replace('<!--FAQ-->', faq).replace('<!--TOWNS-->', towns)

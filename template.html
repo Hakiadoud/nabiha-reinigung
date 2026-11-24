@@ -488,6 +488,7 @@ dialog::backdrop{background:rgba(7,29,64,.55);backdrop-filter:blur(4px)}
     <p>Nabiha Salim, Nabiha Reinigung, {{street}}, {{city}}, Telefon {{phone}}, E-Mail {{email}}.</p>
     <h4>2. Allgemeines</h4>
     <p>Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung dieser Website und zur Bearbeitung Ihrer Anfragen erforderlich ist. Diese Website verwendet keine Cookies, keine Analyse- oder Tracking-Werkzeuge und lädt keine externen Schriftarten.</p>
+    <p>Wenn Sie über die Sprachauswahl selbst eine Sprache wählen, speichern wir diese Auswahl ausschließlich in Ihrem Browser (Local Storage, Eintrag „nabiha_lang“), damit die Website beim nächsten Besuch in Ihrer Sprache erscheint. Diese Information wird nicht an uns oder Dritte übermittelt. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG, da die Speicherung für die von Ihnen gewünschte Funktion unbedingt erforderlich ist. Sie können den Eintrag jederzeit über die Einstellungen Ihres Browsers löschen.</p>
     <h4>3. Hosting und Server-Logfiles</h4>
     <p>Beim Aufruf dieser Website verarbeitet unser Hosting-Anbieter automatisch technische Daten (z. B. IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, Browsertyp), um die Website sicher und stabil auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Betrieb).</p>
     <p>Hosting-Anbieter ist GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (Dienst „GitHub Pages“). Dabei können Daten in die USA übermittelt werden. GitHub ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Weitere Informationen: https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement</p>
@@ -509,7 +510,7 @@ dialog::backdrop{background:rgba(7,29,64,.55);backdrop-filter:blur(4px)}
   var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
   var cur='de';
   function t(k){return (I[cur]&&I[cur][k])||I.de[k]||''}
-  function apply(lang){
+  function apply(lang,save){
     if(!I[lang]) lang='de'; cur=lang;
     var d=document.documentElement; d.lang=lang; d.dir=I[lang]._dir;
     document.title=t('title');
@@ -517,12 +518,12 @@ dialog::backdrop{background:rgba(7,29,64,.55);backdrop-filter:blur(4px)}
     document.querySelectorAll('.lnote').forEach(function(el){el.hidden=(lang==='de')});
     document.getElementById('langCur').textContent=lang.toUpperCase();
     document.querySelectorAll('#langList button').forEach(function(b){b.setAttribute('aria-current',b.dataset.l===lang)});
-    store.set('nabiha_lang',lang);
+    if(save)store.set('nabiha_lang',lang);
     try{var u=new URL(location.href); if(lang==='de')u.searchParams.delete('lang'); else u.searchParams.set('lang',lang); history.replaceState(null,'',u)}catch(e){}
   }
   // language list
   var list=document.getElementById('langList');
-  ORDER.forEach(function(l){var li=document.createElement('li');var b=document.createElement('button');b.type='button';b.dataset.l=l;b.textContent=I[l]._name;b.setAttribute('role','option');b.onclick=function(){apply(l);closeLang()};li.appendChild(b);list.appendChild(li)});
+  ORDER.forEach(function(l){var li=document.createElement('li');var b=document.createElement('button');b.type='button';b.dataset.l=l;b.textContent=I[l]._name;b.setAttribute('role','option');b.onclick=function(){apply(l,true);closeLang()};li.appendChild(b);list.appendChild(li)});
   var langBox=document.getElementById('lang'),langBtn=document.getElementById('langBtn');
   function closeLang(){langBox.classList.remove('open');langBtn.setAttribute('aria-expanded','false')}
   langBtn.onclick=function(e){e.stopPropagation();var o=langBox.classList.toggle('open');langBtn.setAttribute('aria-expanded',o)};
